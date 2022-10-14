@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "New Covid Cases vs New Deaths",
+    "title": "New Covid Cases vs New Deaths in Australia",
     "data": {
       "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_deaths_vs_cases.csv"
     },
@@ -68,7 +68,7 @@
               {
                 "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
                 "encoding": {
-                  "color": {"type": "nominal", "field": "data"}
+                  "color": {"type": "nominal", "field": "data", "title": "Type"}
                 }
               }
             ]
