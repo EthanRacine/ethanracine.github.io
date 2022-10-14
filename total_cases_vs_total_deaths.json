@@ -1,0 +1,28 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Covid-19 Total Cases vs Total Deaths",
+    "description": "A scatterplot showing body mass and flipper lengths of penguins.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/continent_covid_data1.csv"
+    },
+    "mark": "point",
+    "encoding": {
+      "x": {
+        "field": "total_deaths",
+        "type": "quantitative",
+        "scale": {"zero": false}
+      },
+      "y": {
+        "field": "total_cases",
+        "type": "quantitative",
+        "scale": {"zero": false}
+      },
+      "tooltip": [
+      {"field": "location", "type": "nominal", "title": "Continent"},
+      {"field": "date", "type": "nominal", "title": "Date"},
+      {"field": "total_cases", "type": "quantitative", "title": "Total Cases"},
+      {"field": "total_deaths", "type": "quantitative", "title": "Total Deaths"}
+    ],
+      "color": {"field": "location", "type": "nominal", "title": "Continent"}
+    }
+  }
