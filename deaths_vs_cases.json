@@ -3,8 +3,8 @@
     "data": {
       "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_deaths_vs_cases.csv"
     },
-    "width": "800",
-    "height": "400",
+    "width": "150",
+    "height": "200",
     "layer": [
       {
         "encoding": {
