@@ -10,12 +10,14 @@
       "x": {
         "field": "total_deaths",
         "type": "quantitative",
-        "scale": {"zero": false}
+        "scale": {"zero": false},
+        "title": "Total Deaths"
       },
       "y": {
         "field": "total_cases",
         "type": "quantitative",
-        "scale": {"zero": false}
+        "scale": {"zero": false},
+        "title": "Total Cases"
       },
       "tooltip": [
       {"field": "location", "type": "nominal", "title": "Continent"},
