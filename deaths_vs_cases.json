@@ -1,5 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "New Covid Cases vs New Deaths",
     "data": {
       "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_deaths_vs_cases.csv"
     },
