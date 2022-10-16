@@ -1,0 +1,81 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 400,
+    "height": 300,
+    "title": "People Fully Vaccinated per Contient",
+    "data": {"url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/continent_vaccination_rates.csv"},
+    "params": [
+  {
+  "name": "Continent_selection",
+  "bind": {
+  "input": "select",
+  "options": [
+  null,
+  "Africa",
+  "Asia",
+  "Europe",
+  "North America",
+  "Oceania",
+  "South America"
+  ],
+  "labels":[
+  "Show All",
+  "Africa",
+  "Asia",
+  "Europe",
+  "North America",
+  "Oceania",
+  "South America"
+  ],
+  "name": "Continent Selection: "
+  }
+  }
+  ],
+  "transform": [
+  {"filter": "datum.people_fully_vaccinated_per_hundred > 0"},
+  {
+  "filter": "Continent_selection == null || datum.location == Continent_selection"}
+  ],
+  
+    "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date"}},
+    "layer": [
+      {
+        "encoding": {
+          "color": {"field": "location", "type": "nominal", "title": "Continent"},
+          "y": {"field": "people_fully_vaccinated_per_hundred", "type": "quantitative", "title": "People Fully Vaccinated per Hundred"}
+        },
+        "layer": [
+          {"mark": "line"},
+          {"transform": [{"filter": {"param": "hover", "empty": false}}], "mark": "point"}
+        ]
+      },
+      {
+        "transform": [{"pivot": "location", "value": "people_fully_vaccinated_per_hundred", "groupby": ["date"]}],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {"value": 0.3, "param": "hover", "empty": false},
+            "value": 0
+          },
+          "tooltip": [
+            {"field": "Africa", "type": "quantitative"},
+            {"field": "Asia", "type": "quantitative"},
+            {"field": "Europe", "type": "quantitative"},
+            {"field": "North America", "type": "quantitative"},
+            {"field": "Oceania", "type": "quantitative"},
+            {"field": "South America", "type": "quantitative"}
+          ]
+        },
+        "params": [{
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["date"],
+            "nearest": true,
+            "on": "mouseover",
+            "clear": "mouseout"
+          }
+        }]
+      }
+    ]
+  }
