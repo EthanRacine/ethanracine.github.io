@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Daily COVID-19 Cases, Deaths and Vaccinations per Million (2020 - 2022",
+  "title": "Daily COVID-19 Cases, Deaths and Vaccinations per Million (2020-2022)",
   "data": {
     "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_cases_deaths_vaccinations.csv"
   },
@@ -46,7 +46,7 @@
           "type": "quantitative"
         }
       },
-      "width": 200,
+      "width": 190,
       "height": 200,
       "mark": "point",
       "params": [{
@@ -71,7 +71,7 @@
         "x": {"aggregate": "average", "field": "new_vaccinations_smoothed_per_million", "title": "Average Number of Daily Vaccinations"},
         "y": {"title": "Continent", "field": "location"}
       },
-      "width": 200,
+      "width": 190,
       "mark": "bar",
       "params": [{
         "name": "click",
