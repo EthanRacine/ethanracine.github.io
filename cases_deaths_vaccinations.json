@@ -46,7 +46,7 @@
           "type": "quantitative"
         }
       },
-      "width": 250,
+      "width": 450,
       "height": 200,
       "mark": "point",
       "params": [{
@@ -71,7 +71,7 @@
         "x": {"aggregate": "average", "field": "new_vaccinations_smoothed_per_million", "title": "Average Number of Daily Vaccinations"},
         "y": {"title": "Continent", "field": "location"}
       },
-      "width": 250,
+      "width": 450,
       "mark": "bar",
       "params": [{
         "name": "click",
