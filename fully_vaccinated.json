@@ -63,7 +63,8 @@
             {"field": "Europe", "type": "quantitative"},
             {"field": "North America", "type": "quantitative"},
             {"field": "Oceania", "type": "quantitative"},
-            {"field": "South America", "type": "quantitative"}
+            {"field": "South America", "type": "quantitative"},
+            {"field": "date", "timeUnit":"yearmonthdate", "type": "nominal", "title": "Date"}
           ]
         },
         "params": [{
