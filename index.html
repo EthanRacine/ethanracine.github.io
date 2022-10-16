@@ -2,11 +2,6 @@
 <html>
 
 <head>
-  <style>
-    div {
-      margin: auto;
-    }
-  </style>
   <title>Data Visualisation II</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -62,12 +57,13 @@
     <div class="pure-g">
       
       <div class="pure-u-1-2">
-        <div id="vis2" class="vis-container"></div>
+        <div id="vis3" class="vis-container"></div>
       </div>
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h3>What Actions can be Taken?</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <h3 style="margin-left: 50px;">Is there a Correlation with Vaccination Rates?</h2>
+          <p style="margin-left: 50px;"">
+            Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
             sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
         </div>
@@ -79,21 +75,29 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div class="description description-left">
-          <h3>Where has Covid-19 had the Most Impact?</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
-          </p>
-        </div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis3" class="vis-container"></div>
+      <div class="pure-u-1-1">
+        <div id="vis2" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
+
+        <!-- pure grid group -->
+        <div class="pure-g">
+          <div class="pure-u-1-2">
+            <div class="description description-left">
+              <h3>Where has Covid-19 had the Most Impact?</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
+              </p>
+            </div>
+          </div>
+          <div class="pure-u-1-2">
+            <div id="vis4" class="vis-container"></div>
+          </div>
+        </div>
+        <!-- end pure grid group -->
 
     
 
@@ -101,6 +105,7 @@
     var specVis1 = "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/total_deaths.json"; 
     var specVis2 = "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/cases_deaths_vaccinations.json";
     var specVis3 = "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/fully_vaccinated.json"
+    var specVis4 = "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/vaccination_piechart.json"
 
     vegaEmbed('#vis1', specVis1, { "actions": false });
 
