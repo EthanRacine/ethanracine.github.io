@@ -46,7 +46,7 @@
           "type": "quantitative"
         }
       },
-      "width": 250,
+      "width": 200,
       "height": 200,
       "mark": "point",
       "params": [{
