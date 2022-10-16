@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Daily COVID-19 Cases, Deaths and Vaccinations per Million (2020 - 2022",
+    "data": {
+      "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_cases_deaths_vaccinations.csv"
+    },
+    "vconcat": [
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "brush",
+              "title": "Contienent",
+              "field": "location",
+              "type": "nominal",
+              "scale": {
+                "domain": ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"],
+                "range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]
+              }
+            },
+            "value": "lightgray"
+          },
+          
+          "size": {
+            "title": "New Deaths",
+            "field": "new_deaths_per_million",
+            "scale": {"domain": [-1, 14]},
+            "type": "quantitative"
+          },
+          "tooltip": [
+            {"field": "location", "type": "nominal", "title": "Continent"},
+            {"field": "new_cases_per_million", "type": "quantitative", "title": "New Cases"},
+            {"field": "new_deaths_per_million", "type": "quantitative", "title": "New Deaths"}
+          ],
+          "x": {
+            "field": "date",
+            "timeUnit": "yearmonth",
+            "title": "Date",
+            "axis": {"format": "%b"}
+          },
+          "y": {
+            "title": "New Cases",
+            "field": "new_cases_per_million",
+            "scale": {"domain": [-1, 4000]},
+            "type": "quantitative"
+          }
+        },
+        "width": 600,
+        "height": 300,
+        "mark": "point",
+        "params": [{
+          "name": "brush",
+          "select": {"type": "interval", "encodings": ["x"]}
+        }],
+        "transform": [{"filter": {"param": "click"}}]
+      },
+      {
+        "encoding": {
+          "color": {
+            "condition": {
+              "param": "click",
+              "field": "location",
+              "scale": {
+                "domain": ["Africa", "Asia", "Europe", "North America", "Oceania", "South America"],
+                "range": ["#e7ba52", "#a7a7a7", "#aec7e8", "#1f77b4", "#9467bd", "#cf82d9"]
+              }
+            },
+            "value": "lightgray"
+          },
+          "x": {"aggregate": "average", "field": "new_vaccinations_smoothed_per_million", "title": "Average Number of Daily Vaccinations"},
+          "y": {"title": "Continent", "field": "location"}
+        },
+        "width": 600,
+        "mark": "bar",
+        "params": [{
+          "name": "click",
+          "select": {"type": "point", "encodings": ["color"]}
+        }],
+        "transform": [{"filter": {"param": "brush"}}]
+      }
+    ]
+  }
