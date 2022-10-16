@@ -71,7 +71,7 @@
         "x": {"aggregate": "average", "field": "new_vaccinations_smoothed_per_million", "title": "Average Number of Daily Vaccinations"},
         "y": {"title": "Continent", "field": "location"}
       },
-      "width": 250,
+      "width": 200,
       "mark": "bar",
       "params": [{
         "name": "click",
