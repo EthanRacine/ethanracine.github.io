@@ -1,0 +1,14 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Covid-19 Vaccination Doses in Australia (12 October 2022)",
+    "height": 200,
+    "width": 200,
+    "data": {
+      "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/Vaccinations_Dispersion.csv"
+    },
+    "mark": {"type": "arc", "tooltip": true},
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative", "stack": "normalize"},
+      "color": {"field": "Number of Doses", "type": "nominal"}
+    }
+  }
