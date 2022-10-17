@@ -31,11 +31,11 @@
             {"field": "location", "type": "nominal", "title": "Continent"},
             {"field": "new_cases_per_million", "type": "quantitative", "title": "New Cases"},
             {"field": "new_deaths_per_million", "type": "quantitative", "title": "New Deaths"},
-            {"field": "date", "timeUnit": "yearmonth", "title": "Date"}
+            {"field": "date", "timeUnit": "yearmonthdate", "title": "Date"}
           ],
           "x": {
             "field": "date",
-            "timeUnit": "yearmonthdate",
+            "timeUnit": "yearmonth",
             "title": "Date",
             "axis": {"format": "%b"}
           },
