@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+<style>
+  .africa_lines {
+    position: absolute;
+    top: 600px;
+    left: 485px;
+  }
+  .sa_lines {
+    position: absolute;
+    top: 436px;
+    left: 449px;
+  }
+  .oceania_peak {
+    position: absolute;
+    top: 830px;
+    left: 774px;
+  }
+  .map_peru {
+    position: absolute;
+    top: 250px;
+    left: 735px;
+  }
+  .pi_4 {
+    position: absolute;
+    top: 1350px;
+    left: 820px
+  }
+  .pi_3 {
+    position: absolute;
+    top: 1465px;
+    left: 878px;
+  }
+  .pi_2 {
+    position: absolute;
+    top: 1375px;
+    left: 955px;
+  }
+</style>
+
   <title>Data Visualisation II</title>
   <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -30,7 +67,7 @@
     <!-- pure grid group -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-        <center><h1>The Impacts of Covid-19</h1></center>
+        <center><h1><b>Impacts of COVID-19</b></h1></center>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -39,16 +76,19 @@
     <div class="pure-g">
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h3>Where has Covid-19 had the Most Impact?</h2>
+          <h3 style="font-weight: bold;">Where has Covid-19 had the Most Impact?</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
+            COVID-19 is a contagious disease that has spread world wide since it was first identified in Decemeber 2019.
+            It's had an impact on every country, leading to lockdowns, restictions, deaths, effects on the economy, etc.  
+            Countries in Europe, North and South America have incurred the highest death tolls relative to their population, with as high as 6,409 deaths per million in Peru.
           </p>
         </div>
       </div>
       <div class="pure-u-1-2">
         <div id="vis1" class="vis-container"></div>
+        <div class = "map_peru">
+          <p style="font-size: 9px";>Peru has had 6,409 <br> deaths per million</p>
+        </div>
       </div>
     </div>
     <!-- end pure grid group -->
@@ -61,12 +101,22 @@
       </div>
       <div class="pure-u-1-2">
         <div class="description description-left">
-          <h3 style="margin-left: 50px;">Is there a Correlation with Vaccination Rates?</h2>
+          <h3 style="margin-left: 50px;">Is there a Correlation with Vaccination Rates?</h3>
           <p style="margin-left: 50px;"">
-            Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+            COVID-19 Vaccinations are extremely important in combatting this disease, however, as you can see from the chart on the left they aren't the only factor to consider.
+            Africa has the lowest vaccination rate of all continents, yet has been the least impacted by COVID-19.
+            This is due to the quick responses taken from their governments in order to slow the spread of the virus, 
+            the support from the public to adhere with COVID-19 measures, 
+            their young population, having a median age of 19, as well as a favourable climate with a high temperature and humidity
+          </p>
         </div>
+        <div class = "sa_lines">
+          <p style="font-size: 9px";>South America peaks at 24.18 per Hundred</p>
+        </div>
+        <div class = "africa_lines">
+          <p style="font-size: 9px";>Africa peaks at 24.18 per Hundred</p>
+        </div>
+        
       </div>
     
 
@@ -77,7 +127,11 @@
     <div class="pure-g">
       <div class="pure-u-1-1">
         <div id="vis2" class="vis-container"></div>
+        <div class = "oceania_peak">
+          <p style="font-size: 9px";>3957 New Cases in Oceania (12 January 2022)</p>
+        </div>
       </div>
+      
     </div>
     <!-- end pure grid group -->
 
@@ -85,16 +139,26 @@
         <div class="pure-g">
           <div class="pure-u-1-2">
             <div class="description description-left">
-              <h3>Where has Covid-19 had the Most Impact?</h2>
+              <h3>Is COVID-19 Decreasing Worldwide?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. 
+                  Both the severity and amount of cases has reduced since its peak in the beginning of 2022.
+                  Vaccination rates in Australia have increased drastically since they were first available on the 22nd of February 2021.
+                  By the start of February 2022, 78.8% of the population was fully vaccinated, above you can see that following the peak in January 2022, the total cases and deaths has been trending downwards.
+                  As of the 12th of October 2022, 90.6% of Australians have been fully vaccinated.
               </p>
             </div>
           </div>
           <div class="pure-u-1-2">
             <div id="vis4" class="vis-container"></div>
+            <div class = "pi_4">
+              <p style="font-size: 20px";>30.6%</p>
+            </div>
+            <div class = "pi_3">
+              <p style="font-size: 20px";>38.5%</p>
+            </div>
+            <div class = "pi_2">
+              <p style="font-size: 20px";>21.5%</p>
+            </div>
           </div>
         </div>
         <!-- end pure grid group -->
