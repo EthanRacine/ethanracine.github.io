@@ -36,12 +36,11 @@
   {
   "filter": "Continent_selection == null || datum.location == Continent_selection"}
   ],
-  
     "encoding": {"x": {"field": "date", "type": "temporal", "title": "Date"}},
     "layer": [
       {
         "encoding": {
-          "color": {"field": "location", "type": "nominal", "title": "Continent"},
+          "color": {"field": "location", "type": "nominal", "title": "Continent", "scale": {"range": ["#e41a1c", "#984ea3", "#ff7f00", "#a6cee3", "#377eb8", "#a65628"]}},
           "y": {"field": "people_fully_vaccinated_per_hundred", "type": "quantitative", "title": "People Fully Vaccinated per Hundred"}
         },
         "layer": [
