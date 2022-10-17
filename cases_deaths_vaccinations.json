@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Daily COVID-19 Cases, Deaths and Vaccinations per Million (2020 - 2022",
+    "title": "Daily COVID-19 Cases, Deaths and Vaccinations per Million (2020 - 2022)",
     "data": {
       "url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/covid_cases_deaths_vaccinations.csv"
     },
