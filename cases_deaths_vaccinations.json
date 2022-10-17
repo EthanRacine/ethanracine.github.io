@@ -46,7 +46,7 @@
             "type": "quantitative"
           }
         },
-        "width": 300,
+        "width": 650,
         "height": 200,
         "mark": "point",
         "params": [{
@@ -72,7 +72,7 @@
           "tooltip": [{"field": "new_vaccinations_smoothed_per_million", "type": "quantitative", "title": "New Vaccinations"}],
           "y": {"title": "Continent", "field": "location"}
         },
-        "width": 300,
+        "width": 650,
         "mark": "bar",
         "params": [{
           "name": "click",
