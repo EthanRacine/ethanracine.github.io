@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 300,
-    "height": 200,
+    "height": 250,
     "title": "People Fully Vaccinated per Contient",
     "data": {"url": "https://raw.githubusercontent.com/EthanRacine/ethanracine.github.io/main/continent_vaccination_rates.csv"},
     "params": [
